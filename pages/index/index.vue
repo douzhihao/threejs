@@ -29,6 +29,7 @@
 	let TextureLoader;
 
 	let sceneModel;
+	let birthPoint;
 
 	let roleModel;
 	let roleBox;
@@ -117,7 +118,7 @@
 				//create scene
 				scene = new THREE.Scene();
 
-				const fov = 30;
+				const fov = 40;
 				const aspect = container.clientWidth / container.clientHeight;
 				const near = 1;
 				const far = 3000;
@@ -126,10 +127,10 @@
 				camera = new THREE.PerspectiveCamera(fov, aspect);
 				camera.position.set(0, 1.5, 5)
 				camera.lookAt(0, 100, 0);
-				// light
-				light = new THREE.DirectionalLight(0xffffff, 2.5);
-				light.position.set(10, 10, 10);
-				scene.add(light);
+				// // light
+				// light = new THREE.DirectionalLight(0xffffff, 2.5);
+				// light.position.set(10, 10, 10);
+				// scene.add(light);
 				// const light1 = new THREE.PointLight( 0xff0000, 1, 100 );
 				// light1.position.set( 10, 10, 10 );
 				// scene.add( light1 );
@@ -140,6 +141,36 @@
 				renderer.setSize(container.clientWidth, container.clientHeight);
 				renderer.setPixelRatio(window.devicePixelRatio);
 				container.appendChild(renderer.domElement);
+				
+				// TextureLoader
+				TextureLoader = new THREE.TextureLoader();
+				// console.log(TextureLoader);
+				// 加载一个资源
+				TextureLoader.load(
+					// 资源URL
+					// '/static/hdr/DU_World_SKYBALL.jpg',
+					'/static/hdr/texture.jpg',
+					// https://h5test.ophyer.cn/techg2022/static/model/0822/HDR/GHallBG.jpg
+					// onLoad回调
+					function(texture) {
+						// in this example we create the material when the texture is loaded
+						texture.mapping = THREE.EquirectangularReflectionMapping;
+						// scene.background = texture; // 给场景添加背景图
+						scene.environment = texture;
+					}
+				);
+				// 加载一个资源
+				TextureLoader.load(
+					// 资源URL
+					'/static/hdr/meadow_2_1k.jpg',
+					// onLoad回调
+					function(texture) {
+						// in this example we create the material when the texture is loaded
+						texture.mapping = THREE.EquirectangularReflectionMapping;
+						scene.background = texture; // 给场景添加背景图
+						// scene.environment = texture;
+					}
+				);
 
 				// controls
 				controls = new OrbitControls(camera, renderer.domElement);
@@ -150,7 +181,6 @@
 				// controls.minDistance = 3;
 				// controls.minPolarAngle = Math.PI * (45 / 180);
 				// controls.maxPolarAngle = Math.PI * (100 / 180);
-				console.log(controls);
 				controls.target.set(0, 1.5, 0);
 
 				self.loadScene();
@@ -178,25 +208,13 @@
 							node.material = node.material.clone(); // 克隆材质以保留原始设置
 							node.material.side = THREE.DoubleSide; // 设置为双面
 						}
+						// 查找出生点
+						  if (node.name === 'birth01') {
+							birthPoint = node;
+						  }
 					});
-
-
-					// TextureLoader
-					TextureLoader = new THREE.TextureLoader();
-					// console.log(TextureLoader);
-					// 加载一个资源
-					TextureLoader.load(
-						// 资源URL
-						'/static/hdr/DU_World_SKYBALL.jpg',
-						// https://h5test.ophyer.cn/techg2022/static/model/0822/HDR/GHallBG.jpg
-						// onLoad回调
-						function(texture) {
-							// in this example we create the material when the texture is loaded
-							texture.mapping = THREE.EquirectangularReflectionMapping;
-							// scene.background = texture; // 给场景添加背景图
-							scene.environment = texture;
-						}
-					);
+					node.scenes[0].children[2].intensity = 0.8
+					
 
 				})
 			},
@@ -212,7 +230,16 @@
 					roleSit = roleAction.clipAction(node.animations[2]);
 					roleIdle.play();
 					// node.scene.rotateY(Math.PI);
-					node.scene.position.set(0, 0, 0);
+					// 设置人物模型初始位置为出生点
+					      if (birthPoint) {
+							birthPoint.position.x=-4.5
+					        roleModel.position.copy(birthPoint.position);
+							controls.target.copy(birthPoint.position);
+							// controls.position(birthPoint.position)
+					      } else {
+					        console.warn('未找到出生点！');
+					        roleModel.position.set(0, 0, 0);
+					      }
 					// 创建碰撞盒
 					roleBox = new THREE.Box3().setFromObject(roleModel);
 				})
