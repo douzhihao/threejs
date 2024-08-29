@@ -2,54 +2,66 @@
   "hash": "a1f26628",
   "configHash": "08ad8b25",
   "lockfileHash": "99347a0e",
-  "browserHash": "862091e2",
+  "browserHash": "1fd44fdc",
   "optimized": {
     "three": {
       "src": "../../../../../node_modules/three/build/three.module.js",
       "file": "three.js",
-      "fileHash": "c15a198a",
+      "fileHash": "7d1a59ff",
       "needsInterop": false
     },
     "three/examples/jsm/loaders/GLTFLoader": {
       "src": "../../../../../node_modules/three/examples/jsm/loaders/GLTFLoader.js",
       "file": "three_examples_jsm_loaders_GLTFLoader.js",
-      "fileHash": "fd797874",
+      "fileHash": "d842d546",
       "needsInterop": false
     },
     "three/examples/jsm/loaders/GLTFLoader.js": {
       "src": "../../../../../node_modules/three/examples/jsm/loaders/GLTFLoader.js",
       "file": "three_examples_jsm_loaders_GLTFLoader__js.js",
-      "fileHash": "5e7c9eb7",
+      "fileHash": "fdf358de",
       "needsInterop": false
     },
     "three/examples/jsm/libs/stats.module": {
       "src": "../../../../../node_modules/three/examples/jsm/libs/stats.module.js",
       "file": "three_examples_jsm_libs_stats__module.js",
-      "fileHash": "9d04ffd2",
+      "fileHash": "55bcf6a5",
       "needsInterop": false
     },
     "three/examples/jsm/libs/stats.module.js": {
       "src": "../../../../../node_modules/three/examples/jsm/libs/stats.module.js",
       "file": "three_examples_jsm_libs_stats__module__js.js",
-      "fileHash": "4ded683f",
+      "fileHash": "e5eadf30",
       "needsInterop": false
     },
     "three/examples/jsm/loaders/FBXLoader.js": {
       "src": "../../../../../node_modules/three/examples/jsm/loaders/FBXLoader.js",
       "file": "three_examples_jsm_loaders_FBXLoader__js.js",
-      "fileHash": "5cfbc6ec",
+      "fileHash": "a533f841",
       "needsInterop": false
     },
     "three/examples/jsm/controls/OrbitControls": {
       "src": "../../../../../node_modules/three/examples/jsm/controls/OrbitControls.js",
       "file": "three_examples_jsm_controls_OrbitControls.js",
-      "fileHash": "e57e8545",
+      "fileHash": "0d4395d0",
       "needsInterop": false
     },
     "three/examples/jsm/controls/OrbitControls.js": {
       "src": "../../../../../node_modules/three/examples/jsm/controls/OrbitControls.js",
       "file": "three_examples_jsm_controls_OrbitControls__js.js",
-      "fileHash": "8a6141da",
+      "fileHash": "338901e5",
+      "needsInterop": false
+    },
+    "three/examples/jsm/math/Capsule": {
+      "src": "../../../../../node_modules/three/examples/jsm/math/Capsule.js",
+      "file": "three_examples_jsm_math_Capsule.js",
+      "fileHash": "45c5f64c",
+      "needsInterop": false
+    },
+    "three/examples/jsm/math/Octree": {
+      "src": "../../../../../node_modules/three/examples/jsm/math/Octree.js",
+      "file": "three_examples_jsm_math_Octree.js",
+      "fileHash": "b850b1dc",
       "needsInterop": false
     }
   },
@@ -59,6 +71,9 @@
     },
     "chunk-NHBRCRMI": {
       "file": "chunk-NHBRCRMI.js"
+    },
+    "chunk-53S5C343": {
+      "file": "chunk-53S5C343.js"
     },
     "chunk-W3F3ROIV": {
       "file": "chunk-W3F3ROIV.js"

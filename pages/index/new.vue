@@ -13,8 +13,6 @@
 	import {
 		OrbitControls
 	} from "three/examples/jsm/controls/OrbitControls";
-	import {Capsule} from 'three/examples/jsm/math/Capsule';
-	import {Octree} from 'three/examples/jsm/math/Octree';
 
 	let self;
 	let container;
@@ -35,32 +33,19 @@
 
 	let roleModel;
 	let roleBox;
-	
 
 	let roleAction;
 	let roleIdle;
 	let roleRun;
 	let roleSit;
-	
-	let role_originPoint= new THREE.Vector3();
-	// 碰撞 胶囊
-	let roleCapsule = new Capsule(
-	    new THREE.Vector3(0, 0.35*150, 0),
-	    new THREE.Vector3(0, 1.55*150, 0),
-	    0.35*150,
-	);
-	let roleCapsuleCenter = new THREE.Vector3();
-	let roleCapsuleV3 = new THREE.Vector3();
-	// 碰撞体
-	let octree_ground = new Octree();
-	let octree_wall = new Octree();
-	
-	let speed = 0.05;
-	
-	let key_left, key_right, key_front, key_back;
 
 	let lastTime = 0;
 
+	let moveSpeed = 0.01;
+	let direction = new THREE.Vector3(0, 0, 0);
+
+	const raycaster = new THREE.Raycaster();
+	const mouse = new THREE.Vector2();
 
 	export default {
 		data() {
@@ -71,8 +56,41 @@
 		created() {
 			self = this;
 			window.addEventListener("resize", this.throttle(this.resizeWindow));
-			self.keyLinstenerKeyDown();
-			self.keyLinstenerKeyUp();
+			document.addEventListener('keydown', function(event) {
+				// 键盘控制
+					const speed = 0.1;
+					switch (event.key) {
+						case 'w':
+							roleModel.position.z -= speed;
+							break;
+						case 's':
+							roleModel.position.z += speed;
+							break;
+						case 'a':
+							roleModel.position.x -= speed;
+							break;
+						case 'd':
+							roleModel.position.x += speed;
+							break;
+					}
+
+					// 更新碰撞盒
+					roleBox.setFromObject(roleModel);
+
+					// 碰撞检测
+					sceneModel.children.forEach((child) => {
+						if (child !== roleModel && child.type === 'Mesh') {
+							const childBox = new THREE.Box3().setFromObject(child);
+							if (roleBox.intersectsBox(childBox)) {
+								// 碰撞处理
+								console.log('碰撞！');
+								// 例如，将人物模型位置回退到碰撞前的状态
+								roleModel.position.set(roleModel.position.x - speed, roleModel.position.y,
+								roleModel.position.z - speed);
+							}
+						}
+					});
+			});
 
 		},
 		onLoad() {
@@ -83,70 +101,6 @@
 			self.startLoad();
 		},
 		methods: {
-			keyLinstenerKeyDown() {
-				//监听键盘按钮
-				document.onkeydown = function(event) {
-					var e = event || window.event;
-					var keyCode = e.keyCode || e.which;
-					switch (keyCode) {
-						case 87: //W
-							roleModel.rotation.y = Math.PI + controls.getAzimuthalAngle();
-							key_front = true;
-							key_left = false;
-							key_back = false;
-							key_right = false;
-							break;
-						case 65: //A
-							roleModel.rotation.y = -Math.PI / 2 + controls.getAzimuthalAngle();
-							key_left = true;
-							key_front = false;
-							key_back = false;
-							key_right = false;
-							break;
-						case 83: //S
-							roleModel.rotation.y = Math.PI*2 + controls.getAzimuthalAngle();
-							key_back = true;
-							key_front = false;
-							key_left = false;
-							key_right = false;
-							break;
-						case 68: //D
-							roleModel.rotation.y = Math.PI / 2 + controls.getAzimuthalAngle();
-							key_right = true;
-							key_front = false;
-							key_left = false;
-							key_back = false;
-							break;
-					}
-					roleIdle.stop();
-					roleRun.play();
-				}
-			},
-			keyLinstenerKeyUp() {
-				//监听键盘按钮
-				document.onkeyup = function(event) {
-					var e = event || window.event;
-					var keyCode = e.keyCode || e.which;
-					// Male_action.stop();
-					switch (keyCode) {
-						case 87: //W
-							key_front = false;
-							break;
-						case 65: //A
-							key_left = false;
-							break;
-						case 83: //S
-							key_back = false;
-							break;
-						case 68: //D
-							key_right = false;
-							break;
-					}
-					roleIdle.play();
-					roleRun.stop();
-				}
-			},
-			
 			startLoad() {
 				var parent = document.getElementById('panoParent');
 				var div = document.createElement('div');
@@ -277,19 +231,34 @@
 					roleIdle.play();
 					// node.scene.rotateY(Math.PI);
 					// 设置人物模型初始位置为出生点
-					  if (birthPoint) {
-						birthPoint.position.x=-4.5
-						roleModel.position.copy(birthPoint.position);
-						controls.target.copy(birthPoint.position);
-						// controls.position(birthPoint.position)
-					  } else {
-						console.warn('未找到出生点！');
-						roleModel.position.set(0, 0, 0);
-					  }
+					      if (birthPoint) {
+							birthPoint.position.x=-4.5
+					        roleModel.position.copy(birthPoint.position);
+							controls.target.copy(birthPoint.position);
+							// controls.position(birthPoint.position)
+					      } else {
+					        console.warn('未找到出生点！');
+					        roleModel.position.set(0, 0, 0);
+					      }
 					// 创建碰撞盒
-					// roleBox = new THREE.Box3().setFromObject(roleModel);
-					
+					roleBox = new THREE.Box3().setFromObject(roleModel);
 				})
+			},
+			checkCollision() {
+				// 将鼠标位置转换为向量
+				mouse.x = (window.innerWidth / 2) / window.innerWidth * 2 - 1;
+				mouse.y = -(window.innerHeight / 2) / window.innerHeight * 2 + 1;
+
+				// 更新射线投射器的射线方向
+				raycaster.setFromCamera(mouse, camera);
+
+				// 计算与场景中对象的交点
+				const intersects = raycaster.intersectObjects(scene.children);
+
+				if (intersects.length > 0) {
+					// 处理碰撞
+					console.log('Collision detected');
+				}
 			},
 			resizeWindow() {
 				camera.aspect = container.clientWidth / container.clientHeight;
@@ -318,57 +287,14 @@
 				if (roleAction) {
 					roleAction.update(deltaTime / 1000);
 				}
+				// if(roleModel){
+				// 	// 更新相机和轨道控制器的跟随
+				// 	camera.position.copy(roleModel.position)
+				// 	controls.target.copy(roleModel.position);
+				// 	controls.update();
+				// }
+
 				renderer.render(scene, camera);
-				
-				let radian_cos;
-				let radian_sin;
-				if (roleModel) {
-					 radian_cos = Math.cos(roleModel.rotation.y);
-					 radian_sin = Math.sin(roleModel.rotation.y);
-					 // capsule
-					 roleCapsule.getCenter(roleCapsuleCenter);
-					 roleCapsuleV3.subVectors(role_originPoint, roleCapsuleCenter);
-					 roleCapsuleV3.setY(roleCapsuleV3.y + 0.95*150);
-					 roleCapsule.translate(roleCapsuleV3);
-					 
-					 roleModel.updateMatrixWorld();
-					 roleModel.getWorldPosition(role_originPoint);
-				}
-				let radian_angle = controls.getAzimuthalAngle() * 180 / Math.PI;
-
-
-				if (key_front) {
-					camera.position.z += (speed * radian_cos);
-					controls.target.z += (speed * radian_cos);
-					camera.position.x += (speed * radian_sin);
-					controls.target.x += (speed * radian_sin);
-					roleModel.position.z += (speed * radian_cos);
-					roleModel.position.x += (speed * radian_sin);
-				}
-				if (key_back) {
-					camera.position.z += (speed * radian_cos);
-					controls.target.z += (speed * radian_cos);
-					camera.position.x += (speed * radian_sin);
-					controls.target.x += (speed * radian_sin);
-					roleModel.position.z += (speed * radian_cos);
-					roleModel.position.x += (speed * radian_sin);
-				}
-				if (key_left) {
-					camera.position.x += (speed * radian_sin);
-					controls.target.x += (speed * radian_sin);
-					camera.position.z += (speed * radian_cos);
-					controls.target.z += (speed * radian_cos);
-					roleModel.position.x += (speed * radian_sin);
-					roleModel.position.z += (speed * radian_cos);
-				}
-				if (key_right) {
-					camera.position.x += (speed * radian_sin);
-					controls.target.x += (speed * radian_sin);
-					camera.position.z += (speed * radian_cos);
-					controls.target.z += (speed * radian_cos);
-					roleModel.position.x += (speed * radian_sin);
-					roleModel.position.z += (speed * radian_cos);
-				}
 			},
 		}
 	}
