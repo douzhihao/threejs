@@ -243,8 +243,8 @@
 					// console.log(node)
 					scene.add(node.scene);
 					sceneModel = node.scene;
-					const Box001 = node.scene.getObjectByName('wall01');
-					Box001.visible = false;
+					// const Box001 = node.scene.getObjectByName('wall01');
+					// Box001.visible = false;
 
 					// 将场景中的所有对象设置为双面
 					scene.traverse(function(node) {
@@ -266,6 +266,7 @@
 			},
 			loadRole() {
 				loader.load('/static/model/role.glb', function(node) {
+				// loader.load('/static/model/shaonvblander02.glb', function(node) {
 					// loader.load('/static/model/glb1.glb',function(node){
 					// console.log(node)
 					scene.add(node.scene);
