@@ -1,6 +1,6 @@
 import {
   Capsule
-} from "./chunk-53S5C343.js";
+} from "./chunk-OLI4LMZU.js";
 import {
   Box3,
   Layers,
@@ -9,9 +9,9 @@ import {
   Sphere,
   Triangle,
   Vector3
-} from "./chunk-AR5BZUW3.js";
+} from "./chunk-S2S5JEJS.js";
 
-// ../../../HBProject/TSD/node_modules/three/examples/jsm/math/Octree.js
+// ../../../../../../Users/dzh9999/Desktop/Project/TSD/threejs/node_modules/three/examples/jsm/math/Octree.js
 var _v1 = new Vector3();
 var _v2 = new Vector3();
 var _point1 = new Vector3();

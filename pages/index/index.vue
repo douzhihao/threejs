@@ -55,11 +55,20 @@
 	let octree_ground = new Octree();
 	let octree_wall = new Octree();
 	
-	let speed = 0.05;
+	let speed = 0.1;
 	
 	let key_left, key_right, key_front, key_back;
 
 	let lastTime = 0;
+	
+	const raycaster = new THREE.Raycaster();
+	const dir = new THREE.Vector3();
+	
+	function getAverage(arr) {
+	    if (arr.length === 0) return 0; // 如果数组为空，返回0
+	    const sum = arr.reduce((acc, current) => acc + current, 0); // 累加数组元素
+	    return sum / arr.length; // 计算平均值
+	}
 
 
 	export default {
@@ -118,6 +127,7 @@
 							key_back = false;
 							break;
 					}
+					
 					roleIdle.stop();
 					roleRun.play();
 				}
@@ -142,8 +152,11 @@
 							key_right = false;
 							break;
 					}
-					roleIdle.play();
-					roleRun.stop();
+					var allfalse = !key_front && !key_left && !key_back && !key_right;
+					if(allfalse) {
+						roleIdle.play();
+						roleRun.stop();
+					}
 				}
 			},
 			
@@ -221,13 +234,25 @@
 				// controls
 				controls = new OrbitControls(camera, renderer.domElement);
 				// 是否放大缩小
-				// controls.enableZoom = false;
+				controls.enableZoom = false;
 				controls.enablePan = false;
 				// controls.maxDistance = 5;
-				// controls.minDistance = 3;
+				controls.minDistance = 0.2;
 				// controls.minPolarAngle = Math.PI * (45 / 180);
 				// controls.maxPolarAngle = Math.PI * (100 / 180);
 				controls.target.set(0, 1.5, 0);
+				
+				controls.addEventListener( 'change', ()=>{
+					dir.copy(controls.target).sub(controls.object.position);
+					raycaster.far = dir.length();
+					raycaster.set(controls.object.position, dir.normalize());
+					const intersections = raycaster.intersectObjects( sceneModel.children );
+					const intersection = ( intersections.length ) > 0 ? intersections[ 0 ] : null;
+					if(intersection && intersection) {
+						controls.object.position.copy(intersection.point);
+					}
+				} );
+				
 
 				self.loadScene();
 				self.loadRole();
@@ -243,8 +268,8 @@
 					// console.log(node)
 					scene.add(node.scene);
 					sceneModel = node.scene;
-					// const Box001 = node.scene.getObjectByName('wall01');
-					// Box001.visible = false;
+					const Box001 = node.scene.getObjectByName('wall01');
+					Box001.visible = false;
 
 					// 将场景中的所有对象设置为双面
 					scene.traverse(function(node) {
@@ -256,7 +281,12 @@
 						}
 						// 查找出生点
 						  if (node.name === 'birth01') {
-							birthPoint = node;
+							// birthPoint = node;
+							// birthPoint.position.x=-4.5
+							// controls.target.copy(birthPoint.position);
+							// controls.target.y += 1.5
+							controls.object.position.set(-4.5, 2.6, -4.75);
+							controls.update();
 						  }
 					});
 					node.scenes[0].children[2].intensity = 0.8
@@ -279,9 +309,7 @@
 					// node.scene.rotateY(Math.PI);
 					// 设置人物模型初始位置为出生点
 					  if (birthPoint) {
-						birthPoint.position.x=-4.5
 						roleModel.position.copy(birthPoint.position);
-						controls.target.copy(birthPoint.position);
 						// controls.position(birthPoint.position)
 					  } else {
 						console.warn('未找到出生点！');

@@ -1,8 +1,8 @@
 import {
   Vector3
-} from "./chunk-AR5BZUW3.js";
+} from "./chunk-S2S5JEJS.js";
 
-// ../../../HBProject/TSD/node_modules/three/examples/jsm/math/Capsule.js
+// ../../../../../../Users/dzh9999/Desktop/Project/TSD/threejs/node_modules/three/examples/jsm/math/Capsule.js
 var Capsule = class _Capsule {
   constructor(start = new Vector3(0, 0, 0), end = new Vector3(0, 1, 0), radius = 1) {
     this.start = start;
@@ -70,4 +70,4 @@ var Capsule = class _Capsule {
 export {
   Capsule
 };
-//# sourceMappingURL=chunk-53S5C343.js.map
+//# sourceMappingURL=chunk-OLI4LMZU.js.map

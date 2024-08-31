@@ -4,6 +4,2204 @@
         {
             "openVueDevtools" : true,
             "type" : "uni-app:h5"
-        }
+        },
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	},
+	{
+		"h5" : 
+		{
+			"launchtype" : "local"
+		},
+		"type" : "unicloud"
+	}
     ]
 }

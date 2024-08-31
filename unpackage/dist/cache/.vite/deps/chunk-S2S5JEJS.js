@@ -1,4 +1,4 @@
-// ../../../HBProject/TSD/node_modules/three/build/three.module.js
+// ../../../../../../Users/dzh9999/Desktop/Project/TSD/threejs/node_modules/three/build/three.module.js
 var REVISION = "167";
 var MOUSE = { LEFT: 0, MIDDLE: 1, RIGHT: 2, ROTATE: 0, DOLLY: 1, PAN: 2 };
 var TOUCH = { ROTATE: 0, PAN: 1, DOLLY_PAN: 2, DOLLY_ROTATE: 3 };
@@ -31995,4 +31995,4 @@ three/build/three.module.js:
    * SPDX-License-Identifier: MIT
    *)
 */
-//# sourceMappingURL=chunk-AR5BZUW3.js.map
+//# sourceMappingURL=chunk-S2S5JEJS.js.map
