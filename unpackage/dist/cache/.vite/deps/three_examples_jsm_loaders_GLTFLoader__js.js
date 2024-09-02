@@ -65,9 +65,9 @@ import {
   Vector2,
   Vector3,
   VectorKeyframeTrack
-} from "./chunk-S2S5JEJS.js";
+} from "./chunk-5VQFTF74.js";
 
-// ../../../../../../Users/dzh9999/Desktop/Project/TSD/threejs/node_modules/three/examples/jsm/utils/BufferGeometryUtils.js
+// ../../../../Project/threejs/node_modules/three/examples/jsm/utils/BufferGeometryUtils.js
 function toTrianglesDrawMode(geometry, drawMode) {
   if (drawMode === TrianglesDrawMode) {
     console.warn("THREE.BufferGeometryUtils.toTrianglesDrawMode(): Geometry already defined as triangles.");
@@ -123,7 +123,7 @@ function toTrianglesDrawMode(geometry, drawMode) {
   }
 }
 
-// ../../../../../../Users/dzh9999/Desktop/Project/TSD/threejs/node_modules/three/examples/jsm/loaders/GLTFLoader.js
+// ../../../../Project/threejs/node_modules/three/examples/jsm/loaders/GLTFLoader.js
 var GLTFLoader = class extends Loader {
   constructor(manager) {
     super(manager);

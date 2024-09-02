@@ -72,6 +72,9 @@
     "h5" : {
         "router" : {
             "base" : "./"
+        },
+        "devServer" : {
+            "https" : false
         }
     }
 }

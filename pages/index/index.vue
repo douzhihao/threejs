@@ -35,7 +35,6 @@
 
 	let roleModel;
 	let roleBox;
-	
 
 	let roleAction;
 	let roleIdle;
@@ -55,7 +54,7 @@
 	let octree_ground = new Octree();
 	let octree_wall = new Octree();
 	
-	let speed = 0.1;
+	let speed = 0.07;
 	
 	let key_left, key_right, key_front, key_back;
 
@@ -69,8 +68,6 @@
 	    const sum = arr.reduce((acc, current) => acc + current, 0); // 累加数组元素
 	    return sum / arr.length; // 计算平均值
 	}
-
-
 	export default {
 		data() {
 			return {
@@ -196,7 +193,6 @@
 
 				//renderer
 				renderer = new THREE.WebGLRenderer();
-
 				renderer.setSize(container.clientWidth, container.clientHeight);
 				renderer.setPixelRatio(window.devicePixelRatio);
 				container.appendChild(renderer.domElement);
@@ -206,10 +202,8 @@
 				// console.log(TextureLoader);
 				// 加载一个资源
 				TextureLoader.load(
-					// 资源URL
-					// '/static/hdr/DU_World_SKYBALL.jpg',
-					'/static/hdr/texture.jpg',
-					// https://h5test.ophyer.cn/techg2022/static/model/0822/HDR/GHallBG.jpg
+					// 'https://mob.hexntc.com/web0902/static/hdr/texture.jpg',
+					'./static/hdr/texture.jpg',
 					// onLoad回调
 					function(texture) {
 						// in this example we create the material when the texture is loaded
@@ -221,7 +215,8 @@
 				// 加载一个资源
 				TextureLoader.load(
 					// 资源URL
-					'/static/hdr/meadow_2_1k.jpg',
+					// 'https://mob.hexntc.com/web0902/static/hdr/meadow_2_1k.jpg',
+					'./static/hdr/meadow_2_1k.jpg',
 					// onLoad回调
 					function(texture) {
 						// in this example we create the material when the texture is loaded
@@ -234,12 +229,12 @@
 				// controls
 				controls = new OrbitControls(camera, renderer.domElement);
 				// 是否放大缩小
-				controls.enableZoom = false;
-				controls.enablePan = false;
-				// controls.maxDistance = 5;
-				controls.minDistance = 0.2;
-				// controls.minPolarAngle = Math.PI * (45 / 180);
-				// controls.maxPolarAngle = Math.PI * (100 / 180);
+				// controls.enableZoom = false;
+				// controls.enablePan = false;
+				controls.maxDistance = 5;
+				controls.minDistance = 1;
+				controls.minPolarAngle = Math.PI * (45 / 180);
+				controls.maxPolarAngle = Math.PI * (100 / 180);
 				controls.target.set(0, 1.5, 0);
 				
 				controls.addEventListener( 'change', ()=>{
@@ -253,18 +248,15 @@
 					}
 				} );
 				
-
 				self.loadScene();
-				self.loadRole();
-
 				self.animate();
-
 			},
 			loadScene() {
 				loader = new GLTFLoader();
-				// loader.load('/static/model/zhanhuijs.glb',function(node){
-				loader.load('/static/model/classjs2.glb', function(node) {
-					// loader.load('/static/model/yanhuiting.glb',function(node){
+				loader.load(
+				// 'https://mob.hexntc.com/web0902/static/model/classjs2.glb',
+				'./static/model/classjs2.glb',
+				 function(node) {
 					// console.log(node)
 					scene.add(node.scene);
 					sceneModel = node.scene;
@@ -281,23 +273,24 @@
 						}
 						// 查找出生点
 						  if (node.name === 'birth01') {
-							// birthPoint = node;
-							// birthPoint.position.x=-4.5
-							// controls.target.copy(birthPoint.position);
-							// controls.target.y += 1.5
+							birthPoint = node;
+							birthPoint.position.x=-4.5
+							controls.target.copy(birthPoint.position);
+							controls.target.y += 1.5
 							controls.object.position.set(-4.5, 2.6, -4.75);
 							controls.update();
 						  }
 					});
-					node.scenes[0].children[2].intensity = 0.8
+					node.scenes[0].children[2].intensity = 0.8;
+					self.loadRole();
 					
-
 				})
 			},
 			loadRole() {
-				loader.load('/static/model/role.glb', function(node) {
-				// loader.load('/static/model/shaonvblander02.glb', function(node) {
-					// loader.load('/static/model/glb1.glb',function(node){
+				loader.load(
+				// 'https://mob.hexntc.com/web0902/static/model/role.glb',
+				'./static/model/role.glb',
+				 function(node) {
 					// console.log(node)
 					scene.add(node.scene);
 					roleModel = node.scene;
@@ -309,6 +302,7 @@
 					// node.scene.rotateY(Math.PI);
 					// 设置人物模型初始位置为出生点
 					  if (birthPoint) {
+						  // console.log(birthPoint)
 						roleModel.position.copy(birthPoint.position);
 						// controls.position(birthPoint.position)
 					  } else {

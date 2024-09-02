@@ -4,7 +4,7 @@
 			<div class="loading" v-if="showLoading" @click="loadingClick">
 				<div class="loadingText">加载中... </div>
 				<div class="loadingRange">
-					<div class="rangeWidth"></div>
+					<div class="rangeWidth" :style="{ width: loadingIndex + '%' }"></div>
 				</div>
 			</div>
 			<div class="selectRole" v-if="showSelectRole">
@@ -60,16 +60,26 @@
 		data() {
 			return {
 				// 页面数据
-				showLoading: false,
+				loadingIndex:0,
+				showLoading: true,
 				showSelectRole: false,
 				showMicCheck: false,
 				showMicCheckIndex: 1,
-				showSelectLesson: true,
+				showSelectLesson: false,
 				showMainUI: true,
 			};
 		},
 		onLoad() {
 			// 页面加载时执行
+			let that  = this;
+			let timer = setInterval(function(){
+				if(that.loadingIndex == 100){
+					clearInterval(timer);
+					that.showLoading = false;
+					that.showSelectRole = true;
+				}
+				that.loadingIndex = that.loadingIndex+1;
+			},20)
 		},
 		methods: {
 			// 页面方法
@@ -84,6 +94,7 @@
 			micCheckClick(index) {
 				if (index == 5) {
 					this.showMicCheck = false;
+					this.showSelectLesson = true;
 				}
 				this.showMicCheckIndex = index;
 			},
@@ -138,7 +149,7 @@
 			}
 
 			.selectRole {
-				width: 50vw;
+				width: 60vw;
 
 				.selectRoleTitle {
 					font-family: Source Han Sans;
@@ -153,11 +164,11 @@
 
 				.selectClick {
 					display: flex;
-					justify-content: center;
+					justify-content: space-between;
 					align-items: center;
 
 					image {
-						width: 50%;
+						width: 45%;
 					}
 				}
 			}

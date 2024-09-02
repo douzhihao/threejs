@@ -9,9 +9,9 @@ import {
   TOUCH,
   Vector2,
   Vector3
-} from "./chunk-S2S5JEJS.js";
+} from "./chunk-5VQFTF74.js";
 
-// ../../../../../../Users/dzh9999/Desktop/Project/TSD/threejs/node_modules/three/examples/jsm/controls/OrbitControls.js
+// ../../../../Project/threejs/node_modules/three/examples/jsm/controls/OrbitControls.js
 var _changeEvent = { type: "change" };
 var _startEvent = { type: "start" };
 var _endEvent = { type: "end" };

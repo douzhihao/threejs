@@ -1,46 +1,46 @@
 {
-  "hash": "69aaef28",
-  "configHash": "39752790",
-  "lockfileHash": "99347a0e",
-  "browserHash": "d04be4e7",
+  "hash": "fc79f97b",
+  "configHash": "a7fef736",
+  "lockfileHash": "01603ec8",
+  "browserHash": "31ba7ba6",
   "optimized": {
     "three": {
       "src": "../../../../../node_modules/three/build/three.module.js",
       "file": "three.js",
-      "fileHash": "c3a8c8f3",
+      "fileHash": "391ad5ad",
       "needsInterop": false
     },
     "three/examples/jsm/loaders/GLTFLoader.js": {
       "src": "../../../../../node_modules/three/examples/jsm/loaders/GLTFLoader.js",
       "file": "three_examples_jsm_loaders_GLTFLoader__js.js",
-      "fileHash": "657493fb",
+      "fileHash": "960230bb",
       "needsInterop": false
     },
     "three/examples/jsm/controls/OrbitControls": {
       "src": "../../../../../node_modules/three/examples/jsm/controls/OrbitControls.js",
       "file": "three_examples_jsm_controls_OrbitControls.js",
-      "fileHash": "c51c9d89",
+      "fileHash": "86f4cff4",
       "needsInterop": false
     },
     "three/examples/jsm/math/Capsule": {
       "src": "../../../../../node_modules/three/examples/jsm/math/Capsule.js",
       "file": "three_examples_jsm_math_Capsule.js",
-      "fileHash": "0f723758",
+      "fileHash": "1216d865",
       "needsInterop": false
     },
     "three/examples/jsm/math/Octree": {
       "src": "../../../../../node_modules/three/examples/jsm/math/Octree.js",
       "file": "three_examples_jsm_math_Octree.js",
-      "fileHash": "87ddf1bf",
+      "fileHash": "c88d3beb",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-OLI4LMZU": {
-      "file": "chunk-OLI4LMZU.js"
+    "chunk-S4JQICOM": {
+      "file": "chunk-S4JQICOM.js"
     },
-    "chunk-S2S5JEJS": {
-      "file": "chunk-S2S5JEJS.js"
+    "chunk-5VQFTF74": {
+      "file": "chunk-5VQFTF74.js"
     }
   }
 }
