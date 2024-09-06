@@ -1,32 +1,32 @@
 <template>
 	<view class="container">
-		<div class="mainUi" v-if="showMainUI">
-			<div class="loading" v-if="showLoading" @click="loadingClick">
+		<div class="mainUi" v-show="showMainUI">
+			<div class="loading" v-show="showLoading" @click="loadingClick">
 				<div class="loadingText">加载中... </div>
 				<div class="loadingRange">
 					<div class="rangeWidth" :style="{ width: loadingIndex + '%' }"></div>
 				</div>
 			</div>
-			<div class="selectRole" v-if="showSelectRole">
+			<div class="selectRole" v-show="showSelectRole">
 				<div class="selectRoleTitle">基础英语教育师范技能虚拟仿真实验</div>
 				<div class="selectClick">
 					<image src="../../static/ui/select01.png" mode="widthFix" @click="selectRoleClick"></image>
 					<image src="../../static/ui/select02.png" mode="widthFix" @click="selectRoleClick"></image>
 				</div>
 			</div>
-			<div class="micCheck" v-if="showMicCheck">
-				<div class="startCheck" v-if="showMicCheckIndex == 1">
+			<div class="micCheck" v-show="showMicCheck">
+				<div class="startCheck" v-show="showMicCheckIndex == 1">
 					<p>本课程需要使用语音完成实验内容 </p>
 					<p>点击下方按钮以检测麦克风是否可用</p>
 					<div class="imgBtn" @click="micCheckClick(2)">
 						<image src="../../static/ui/check01.png" mode="widthFix"></image>
 					</div>
 				</div>
-				<div class="checking" @click="micCheckClick(3)" v-if="showMicCheckIndex == 2">
+				<div class="checking" @click="micCheckClick(3)" v-show="showMicCheckIndex == 2">
 					<p>检测中...</p>
 					<image src="../../static/ui/checking.png" mode="widthFix"></image>
 				</div>
-				<div class="reCheck" v-if="showMicCheckIndex == 3">
+				<div class="reCheck" v-show="showMicCheckIndex == 3">
 					<p>未检测到麦克风，</p>
 					<p>将无法获取录音评分，</p>
 					<p>确认继续实验吗？</p>
@@ -35,7 +35,7 @@
 						<image src="../../static/ui/continue.png" mode="widthFix" @click="micCheckClick(4)"></image>
 					</div>
 				</div>
-				<div class="checkDone" v-if="showMicCheckIndex == 4">
+				<div class="checkDone" v-show="showMicCheckIndex == 4">
 					<p>检测成功！</p>
 					<p>立即开启课程体验。</p>
 					<div class="imgBtn" @click="micCheckClick(5)">
@@ -43,7 +43,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="selectLesson" v-if="showSelectLesson">
+			<div class="selectLesson" v-show="showSelectLesson">
 				<p>基础英语教育师范技能虚拟仿真实验</p>
 				<div class="selectBox">
 					<image src="../../static/ui/lesson01.png" mode="widthFix" @click="showMainUIClick"></image>

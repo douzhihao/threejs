@@ -40,6 +40,7 @@
 	let roleIdle;
 	let roleRun;
 	let roleSit;
+	let roleWalk;
 	
 	let role_originPoint= new THREE.Vector3();
 	// 碰撞 胶囊
@@ -192,7 +193,11 @@
 				// scene.add( light1 );
 
 				//renderer
-				renderer = new THREE.WebGLRenderer();
+				renderer = new THREE.WebGLRenderer({
+					antialias: true, // 抗锯齿
+					depth: true // 开启深度缓冲
+				});
+				
 				renderer.setSize(container.clientWidth, container.clientHeight);
 				renderer.setPixelRatio(window.devicePixelRatio);
 				container.appendChild(renderer.domElement);
@@ -203,7 +208,7 @@
 				// 加载一个资源
 				TextureLoader.load(
 					// 'https://mob.hexntc.com/web0902/static/hdr/texture.jpg',
-					'./static/hdr/texture.jpg',
+					'../../static/hdr/texture.jpg',
 					// onLoad回调
 					function(texture) {
 						// in this example we create the material when the texture is loaded
@@ -216,7 +221,7 @@
 				TextureLoader.load(
 					// 资源URL
 					// 'https://mob.hexntc.com/web0902/static/hdr/meadow_2_1k.jpg',
-					'./static/hdr/meadow_2_1k.jpg',
+					'../../static/hdr/meadow_2_1k.jpg',
 					// onLoad回调
 					function(texture) {
 						// in this example we create the material when the texture is loaded
@@ -231,22 +236,22 @@
 				// 是否放大缩小
 				// controls.enableZoom = false;
 				// controls.enablePan = false;
-				controls.maxDistance = 5;
+				controls.maxDistance = 3;
 				controls.minDistance = 1;
 				controls.minPolarAngle = Math.PI * (45 / 180);
 				controls.maxPolarAngle = Math.PI * (100 / 180);
 				controls.target.set(0, 1.5, 0);
 				
-				controls.addEventListener( 'change', ()=>{
-					dir.copy(controls.target).sub(controls.object.position);
-					raycaster.far = dir.length();
-					raycaster.set(controls.object.position, dir.normalize());
-					const intersections = raycaster.intersectObjects( sceneModel.children );
-					const intersection = ( intersections.length ) > 0 ? intersections[ 0 ] : null;
-					if(intersection && intersection) {
-						controls.object.position.copy(intersection.point);
-					}
-				} );
+				// controls.addEventListener( 'change', ()=>{
+				// 	dir.copy(controls.target).sub(controls.object.position);
+				// 	raycaster.far = dir.length();
+				// 	raycaster.set(controls.object.position, dir.normalize());
+				// 	const intersections = raycaster.intersectObjects( sceneModel.children );
+				// 	const intersection = ( intersections.length ) > 0 ? intersections[ 0 ] : null;
+				// 	if(intersection && intersection) {
+				// 		controls.object.position.copy(intersection.point);
+				// 	}
+				// } );
 				
 				self.loadScene();
 				self.animate();
@@ -255,13 +260,23 @@
 				loader = new GLTFLoader();
 				loader.load(
 				// 'https://mob.hexntc.com/web0902/static/model/classjs2.glb',
-				'./static/model/classjs2.glb',
+				// '../../static/model/classjs2.glb',
+				'../../static/model/classjs5.glb',
 				 function(node) {
 					// console.log(node)
 					scene.add(node.scene);
 					sceneModel = node.scene;
-					const Box001 = node.scene.getObjectByName('wall01');
+					console.log(sceneModel.children)
+					const Box001 = sceneModel.getObjectByName('wall01');
 					Box001.visible = false;
+					Box001.scale.x = 0.01;
+					
+					const Box13 = sceneModel.getObjectByName('Box013');
+					Box13.visible = false;
+					const Object_16 = sceneModel.getObjectByName('Object_16');
+					Object_16.visible = false;
+					
+					sceneModel.scale.set(0.95, 0.95, 0.95); // 将物体的尺寸缩小到原来的一半
 
 					// 将场景中的所有对象设置为双面
 					scene.traverse(function(node) {
@@ -271,35 +286,36 @@
 							node.material = node.material.clone(); // 克隆材质以保留原始设置
 							node.material.side = THREE.DoubleSide; // 设置为双面
 						}
+						
 						// 查找出生点
 						  if (node.name === 'birth01') {
 							birthPoint = node;
 							birthPoint.position.x=-4.5
 							controls.target.copy(birthPoint.position);
 							controls.target.y += 1.5
-							controls.object.position.set(-4.5, 2.6, -4.75);
+							controls.object.position.set(-6.5, 1.5, 0.9);
 							controls.update();
 						  }
 					});
-					node.scenes[0].children[2].intensity = 0.8;
+					// node.scenes[0].children[2].intensity = 0.8;
 					self.loadRole();
 					
 				})
 			},
 			loadRole() {
 				loader.load(
-				// 'https://mob.hexntc.com/web0902/static/model/role.glb',
-				'./static/model/role.glb',
+				'../../static/model/shaonvblanderdonghua01.glb',
 				 function(node) {
 					// console.log(node)
 					scene.add(node.scene);
 					roleModel = node.scene;
-					roleAction = new THREE.AnimationMixer(node.scene);
-					roleIdle = roleAction.clipAction(node.animations[0]);
-					roleRun = roleAction.clipAction(node.animations[1]);
-					roleSit = roleAction.clipAction(node.animations[2]);
+					roleAction = new THREE.AnimationMixer(roleModel);
+					roleIdle = roleAction.clipAction(node.animations[1]);
+					roleRun = roleAction.clipAction(node.animations[2]);
+					roleWalk = roleAction.clipAction(node.animations[0]);
 					roleIdle.play();
-					// node.scene.rotateY(Math.PI);
+					roleModel.rotateY(Math.PI/2);
+					roleModel.scale.set(1.2, 1.2, 1.2); 
 					// 设置人物模型初始位置为出生点
 					  if (birthPoint) {
 						  // console.log(birthPoint)
@@ -309,6 +325,14 @@
 						console.warn('未找到出生点！');
 						roleModel.position.set(0, 0, 0);
 					  }
+					  
+					  const material = new THREE.MeshBasicMaterial({
+					    color: 0xff0000,
+					    side: THREE.FrontSide, // 使用单面材质
+					    depthWrite: true, // 开启深度写入
+					    depthTest: true, // 开启深度测试
+					  });
+					  
 					// 创建碰撞盒
 					// roleBox = new THREE.Box3().setFromObject(roleModel);
 					
@@ -342,6 +366,7 @@
 					roleAction.update(deltaTime / 1000);
 				}
 				renderer.render(scene, camera);
+				// console.log(controls.object.position)
 				
 				let radian_cos;
 				let radian_sin;
