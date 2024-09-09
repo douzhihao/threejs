@@ -195,11 +195,13 @@
 				//renderer
 				renderer = new THREE.WebGLRenderer({
 					antialias: true, // 抗锯齿
-					depth: true // 开启深度缓冲
+					depth: true ,// 开启深度缓冲
+					// logarithmicDepthBuffer: true
 				});
 				
 				renderer.setSize(container.clientWidth, container.clientHeight);
 				renderer.setPixelRatio(window.devicePixelRatio);
+				// renderer.logarithmicDepthBuffer = true;
 				container.appendChild(renderer.domElement);
 				
 				// TextureLoader
@@ -242,16 +244,16 @@
 				controls.maxPolarAngle = Math.PI * (100 / 180);
 				controls.target.set(0, 1.5, 0);
 				
-				// controls.addEventListener( 'change', ()=>{
-				// 	dir.copy(controls.target).sub(controls.object.position);
-				// 	raycaster.far = dir.length();
-				// 	raycaster.set(controls.object.position, dir.normalize());
-				// 	const intersections = raycaster.intersectObjects( sceneModel.children );
-				// 	const intersection = ( intersections.length ) > 0 ? intersections[ 0 ] : null;
-				// 	if(intersection && intersection) {
-				// 		controls.object.position.copy(intersection.point);
-				// 	}
-				// } );
+				controls.addEventListener( 'change', ()=>{
+					dir.copy(controls.target).sub(controls.object.position);
+					raycaster.far = dir.length();
+					raycaster.set(controls.object.position, dir.normalize());
+					const intersections = raycaster.intersectObjects( sceneModel.children );
+					const intersection = ( intersections.length ) > 0 ? intersections[ 0 ] : null;
+					if(intersection && intersection) {
+						controls.object.position.copy(intersection.point);
+					}
+				} );
 				
 				self.loadScene();
 				self.animate();
@@ -315,7 +317,12 @@
 					roleWalk = roleAction.clipAction(node.animations[0]);
 					roleIdle.play();
 					roleModel.rotateY(Math.PI/2);
-					roleModel.scale.set(1.2, 1.2, 1.2); 
+					roleModel.scale.set(1.2, 1.2, 1.2);
+
+					const _face = roleModel.getObjectByName('网格006_1');
+					_face.material.depthWrite = true;
+					const _tear = roleModel.getObjectByName('Female_8_1_TearShape');
+					 _tear.material.color.set(0x965454)
 					// 设置人物模型初始位置为出生点
 					  if (birthPoint) {
 						  // console.log(birthPoint)
